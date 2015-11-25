@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-
+                    alert2();
             }
         });
 
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void alert1() {
-        new AlertDialog.Builder(this).setTitle("Title").setMessage("Mess").
+        new AlertDialog.Builder(this).setTitle("หัวเรื่อง").setMessage("ข้อความ").
                 setPositiveButton(android.R.string.yes,
                         new DialogInterface.OnClickListener() {
                             @Override
@@ -47,7 +47,28 @@ public class MainActivity extends AppCompatActivity {
 
                             }
                         })
-                .setIcon(android.R.drawable.ic_dialog_email)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
+
+
+    }
+
+    public void alert2() {
+        new AlertDialog.Builder(this).setTitle("หัวเรื่องแจ้งเตือน").setMessage("ข้อความ")
+                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                })
+                .setPositiveButton(android.R.string.yes,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        })
+                .setIcon(android.R.drawable.ic_dialog_alert)
                 .show();
 
 
